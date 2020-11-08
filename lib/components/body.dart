@@ -1,12 +1,10 @@
-import 'package:baby_names/components/rasi_options.dart';
-import 'package:baby_names/components/religion_options.dart';
+import 'package:baby_names/components/search_button.dart';
 import 'package:flutter/material.dart';
-import '../constants.dart';
 import 'alpha_button.dart';
-import 'char_lenght_slider.dart';
+import 'drop_down.dart';
 import 'gender_selection.dart';
 import 'header.dart';
-import 'numerology_options.dart';
+import 'name_lenght_slider.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -18,23 +16,9 @@ class Body extends StatelessWidget {
           HeaderWithSearchBar(size: size),
           GenderSelection(),
           AlphabetButton(),
-          Container(
-            margin: EdgeInsets.all(kDefaultPadding),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ReligiosDropDown(),
-                RasiDropDown(),
-                NumerologyDropDown(),
-              ],
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.all(kDefaultPadding),
-            child: Column(children: [
-              CharLengthSlider(),
-            ]),
-          )
+          DropDowns(),
+          NameLengthSlider(),
+          SearchButton()
         ],
       ),
     );
